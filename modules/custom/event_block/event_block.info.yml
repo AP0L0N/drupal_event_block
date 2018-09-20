@@ -1,0 +1,7 @@
+name: Event block
+type: module
+description: Simple block displayed in a sidebar of every event content type
+core: 8.x
+package: WebWash
+dependencies:
+  - block

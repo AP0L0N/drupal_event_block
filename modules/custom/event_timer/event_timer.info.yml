@@ -1,0 +1,4 @@
+name: Event timer
+description: This service will parse given event date stamp and return proper string as a result that will tell us how long until the event start.
+type: module
+core: 8.x

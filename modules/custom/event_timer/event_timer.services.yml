@@ -1,0 +1,3 @@
+services:
+  event_timer.calculate:
+    class: Drupal\event_timer\EventTimerService

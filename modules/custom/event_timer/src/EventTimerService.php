@@ -11,7 +11,7 @@ use Drupal\Core\Datetime\DrupalDateTime;
  */
 class EventTimerService {
 
-    public static function getHumanDateDifferenceForEvent(DrupalDateTime $date) {
+    public static function getHumanDateDifferenceForEvent(DrupalDateTime $date) : string {
 
         $today = new DrupalDateTime();
         $diff = $today->diff($date);

@@ -24,13 +24,15 @@ class EventBlock extends BlockBase {
     public function build() {
 
         $node = \Drupal::request()->attributes->get('node');
+        $type = $node->get("type")->getvalue();
 
-        if($node) {
+        if(isset($node, $type) && current(current($type)) === "event") {
 
             $timestamp = $node->get('field_event_date')->getValue();
             $date = DrupalDateTime::createFromFormat("Y-m-d\TH:i:s", current(current($timestamp)));
             $markup = $this->t(EventTimerService::getHumanDateDifferenceForEvent($date));
-        }
+
+        } else return false;
 
         return [
             '#type' => 'markup',
